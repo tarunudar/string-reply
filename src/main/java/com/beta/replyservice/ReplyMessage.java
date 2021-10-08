@@ -1,14 +1,15 @@
 package com.beta.replyservice;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class ReplyMessage {
 
-	private final String message;
+	private String message;
+	private String status;
 
-	public ReplyMessage(String message) {
-		this.message = message;
-	}
+	public ReplyMessage(String string) { }
 
-	public String getMessage() {
-		return message;
-	}
 }

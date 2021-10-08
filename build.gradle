@@ -13,10 +13,14 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation('org.springframework.boot:spring-boot-starter-web',
+	               'org.springframework.data:spring-data-mongodb:1.7.2.RELEASE',
+	               'commons-codec:commons-codec:1.6',
+	               'org.projectlombok:lombok:1.18.22')
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
+	compileOnly("org.springframework.boot:spring-boot-devtools")
 }
 
 test {
